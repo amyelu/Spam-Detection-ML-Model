@@ -1,0 +1,4 @@
+contractions==0.1.73
+joblib
+nltk==3.9.1
+scikit-learn
