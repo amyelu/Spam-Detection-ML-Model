@@ -3,7 +3,7 @@
 ## Overview
 This project is a **Spam Detection Model** that classifies text messages as **Spam** or **Not Spam** using **Machine Learning**. The model is trained on a dataset of labeled messages and utilizes **TF-IDF vectorization** and a **Logistic Regression classifier**.
 
-**🔗 Try it live:** [Click here](https://spam-detection-model-amyelu.streamlit.app/)
+**🔗 Try it live:** [Click here](https://amakaelue-spam-detection-ml-model.streamlit.app/)
 
 ## Features
 - Classifies text messages as spam or not spam
@@ -44,26 +44,17 @@ model = joblib.load("spam_model.pkl")
 vectorizer = joblib.load("vectorizer.pkl")
 ```
 
-## Example Usage in Python
-You can also use the model directly in your Python code:
-
-```python
-from main import predict_spam
-
-text = "Congratulations! You have won a free gift."
-print(predict_spam(text))  # Output: Spam
-```
-#### Out-of-Scope Use
+## Out-of-Scope Use
 This model is not designed to detect phishing attempts, malware in attachments, or other security threats beyond text-based spam classification. Its performance may degrade on texts that differ significantly from the training data, such as non-English messages or content from domains unrelated to emails.
 
-#### Performance & Expected Use Cases
+## Performance & Expected Use Cases
 The model achieves high accuracy on standard spam datasets, making it suitable for filtering spam in emails, SMS, and similar text-based communications. However, results may vary depending on the dataset and real-world application, so users should validate performance on their specific data.
 
-#### Biases, Risks, and Limitations
+## Biases, Risks, and Limitations
 The model's predictions may be influenced by biases in the training data, especially for edge cases or underrepresented categories. While it effectively identifies spam, occasional false positives and negatives may occur. Users should incorporate human oversight or additional review mechanisms to ensure important messages are not mistakenly filtered out.
 - **Short texts are more prone to misclassification if they contain biased words that the model has strongly associated with spam.**
 
-#### Model Maintenance & Adaptability
+## Model Maintenance & Adaptability
 Spam tactics evolve over time, so regularly updating your dataset and retraining the model will help it adapt to new spam patterns and maintain accuracy in real-world applications.
 
 ## Contributing
