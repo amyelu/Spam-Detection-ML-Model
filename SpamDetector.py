@@ -13,6 +13,7 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
+nltk.download('punkt_tab') 
 
 # Load trained model and vectorizer
 model = joblib.load("spam_classifier.pkl")
